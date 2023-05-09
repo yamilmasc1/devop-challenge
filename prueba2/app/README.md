@@ -19,13 +19,18 @@
 <h2>Para desplegar la aplicacion en la nube (AWS) es necesario:</h2>
     
 1)Para desplegar un docker-compose en AWS es necesario crear una instancia de Amazon EC2. Esto se puede hacer desde la consola AWS o mediante herramientas como AWS CLI.
+
 2) Conectarse a la instancia mediante SSH. Se debe hacer utilizando la clave de acceso que se proporciona cuando se crea la instancia.
+
 3)Instalar docker en la instancia de EC2. Esto se puede hacer mediante el uso de los siguientes comandos:
    <b> sudo yum update -y
     sudo amazon-linux-extras install docker -y
     sudo service docker start
     sudo usermod -a -G docker ec2-user </b>
- 4)Descargar los archivos en donde se encuentra el docker-compose.yaml en la instancia. Esto se puede hacer mediante el uso del comando wget o curl.
- 5)Ejecutar el comando <b> docker-compose up -d</b> para iniciar los contenedores. Tene en cuenta que debes encontrarte en el mismo directorio que el archivo docker-compose.yaml antes de ejecutar el comando.
- 6) Una vez completados estos pasos, la aplicacion deberia estar en ejecucion en la instancia de EC2 y se deberia poder acceder a ella desde la direccion IP publica de la instancia.
+ 
+4)Descargar los archivos en donde se encuentra el docker-compose.yaml en la instancia. Esto se puede hacer mediante el uso del comando wget o curl.
+
+5)Ejecutar el comando <b> docker-compose up -d</b> para iniciar los contenedores. Tene en cuenta que debes encontrarte en el mismo directorio que el archivo docker-compose.yaml antes de ejecutar el comando.
+
+6) Una vez completados estos pasos, la aplicacion deberia estar en ejecucion en la instancia de EC2 y se deberia poder acceder a ella desde la direccion IP publica de la instancia.
     
